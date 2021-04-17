@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Diff</key>
+	<array>
+		<dict>
+			<key>ModifiedContent</key>
+			<string>import PlaygroundSupport
+import UIKit
+import SwiftUI
+
+
+struct ContentView: View {
+    
+    init() {}
+    
+    var body: some View {
+        
+        NavigationView {
+            HomeView()
+            
+        }
+        .frame(width: Bounds.width, height: Bounds.height, alignment: .center)
+        
+        .navigationViewStyle(StackNavigationViewStyle())
+        .navigationTitle("")
+        .navigationBarHidden(true)
+        
+    }
+}
+
+PlaygroundPage.current.setLiveView(ContentView())
+
+
+
+/*
+ Feedback:
+ change
+ 
+ 
+ 
+ Welcome to My Best Buddy!
+ 
+ Click any of the sounds below to try and get your dog to come to you!
+ 
+ If you want to have a suggestion for a dog, take the dog quiz!
+ If you want to play a fun game, then get started by clicking the button!
+ 
+ Game:
+ Move the dog by draging the picture left to right. Try to avoid the trees, but let the dog get bones so that he can become invincible for a short while.
+ 
+ **Sources**
+ 
+ Misc images: -- public domain
+ - bone: https://pixabay.com/vectors/search/bones/
+ - background: http://clipart-library.com/clipart/n1170482.htm
+ 
+ Trees images: -- public domain
+ - tree 1: https://pixabay.com/vectors/clip-art-flora-nature-plant-tree-1300587/
+ - tree 2: https://pixabay.com/vectors/search/tree/
+ - tree 3: https://pixabay.com/illustrations/search/apple%20tree/
+ 
+ 
+ Sounds files: -- need to check if you can cite or not
+ - Doorbell: https://www.soundjay.com/doorbell-sound-effect.html
+ - Ducks Quacking: https://www.freesoundslibrary.com/duck-quack/
+ - Serenity: https://www.freesoundslibrary.com/birds-chirping-sound-effect/
+ 
+ Dog Images: --&gt; public domain
+ - Mini Schnauzer: https://commons.wikimedia.org/wiki/File:White_mini_schnauzer_puppy_runs.jpg
+ - Kerry Blue Terrier: https://www.flickr.com/photos/martinhesketh/35382615616/
+ - Chihuahua: https://www.flickr.com/photos/barnimages/18589470246
+ - Pembroke Welsh Corgi: https://pixabay.com/photos/welsh-corgi-pembroke-corgi-shepherd-4191063/
+ - Portuguese Water Dog: https://pixabay.com/photos/dog-portuguese-water-dog-pet-pup-5010604/
+ - Irish Water Spaniel: https://www.flickr.com/photos/fortinbras/3001455252
+ - Rough Collie: https://commons.wikimedia.org/wiki/File:Rough-Collie-japan08.jpg
+ - Rottweiler: https://www.flickr.com/photos/104094986@N06/10080227435
+ - Giant Schnauzer: https://commons.wikimedia.org/wiki/File:GiantSchnauzer_Grass.jpg
+ - Bullmastiff: https://commons.wikimedia.org/wiki/File:Bullmastiff_edited.JPG
+ - Dobermann: https://commons.wikimedia.org/wiki/File:Jean_Dark_Snö_of_Sweden.jpg
+ - Golden Retriever: https://commons.wikimedia.org/wiki/File:Golden_Retriever_Carlos_(10581910556).jpg
+ 
+ 
+ */
+</string>
+			<key>ModifiedRange</key>
+			<string>{1, 2635}</string>
+			<key>OriginalContent</key>
+			<string></string>
+			<key>OriginalRange</key>
+			<string>{1, 0}</string>
+		</dict>
+	</array>
+	<key>File</key>
+	<string>Chapters/Chapter1.playgroundchapter/Pages/My Playground.playgroundpage/main.swift</string>
+</dict>
+</plist>

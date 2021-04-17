@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Diff</key>
+	<array>
+		<dict>
+			<key>ModifiedContent</key>
+			<string>import SwiftUI
+
+public struct Bounds {
+    public static let width: CGFloat = UIScreen.main.bounds.width
+    public static let height: CGFloat = UIScreen.main.bounds.height
+    
+    init() {}
+}
+
+public struct ButtonLabelView: View {
+    
+    private let text: String
+    private let size: CGFloat
+    private let iconName: String
+    private let width: CGFloat
+    private let height: CGFloat
+    private let isDisabled: Bool
+    
+    init(text: String, size: CGFloat, icon iconName: String?, width: CGFloat, height: CGFloat, isDisabled: Bool) {
+        self.text = text
+        self.size = size
+        self.iconName = iconName ?? ""
+        self.width = width
+        self.height = height
+        self.isDisabled = isDisabled
+    }
+    
+    init(text: String, size: CGFloat, icon iconName: String?, width: CGFloat, height: CGFloat) {
+        self.text = text
+        self.size = size
+        self.iconName = iconName ?? ""
+        self.width = width
+        self.height = height
+        self.isDisabled = false
+    }
+    
+    public var body: some View {
+        VStack {
+            Image(systemName: iconName)
+                .resizable()
+                .scaledToFit()
+                .frame(width: iconName.isEmpty ? 0 : .infinity, height: iconName.isEmpty ? 0 : 25)
+                .padding(.top, iconName.isEmpty ? 0 : 10)
+            
+            Text(text)
+                .font(.system(size: self.size, weight: .semibold, design: .rounded))
+                .multilineTextAlignment(.center)
+                .foregroundColor(isDisabled ? .black : .blue)
+                .padding(.all, 10)
+            
+            
+        }
+        
+        .frame(width: self.width, height: self.height)
+        .background(
+            Color.white
+        )
+        .clipShape(RoundedRectangle(cornerRadius: 16, style: .continuous))
+        .shadow(color: Color(#colorLiteral(red: 0.7608050108, green: 0.8164883852, blue: 0.9259157777, alpha: 1)), radius: 10, x: 10, y: 10)
+    }
+}
+
+public struct LabelView: View {
+    private let text: String
+    private let size: CGFloat
+    private let iconName: String?
+    private let width: CGFloat
+    private let height: CGFloat
+    
+    public init(text: String, size: CGFloat, icon iconName: String?, width: CGFloat, height: CGFloat) {
+        self.text = text
+        self.size = size
+        self.iconName = iconName
+        self.width = width
+        self.height = height
+    }
+    
+    public var body: some View {
+        Button(action: {
+            print("Hello World!")
+        }, label: {
+            ButtonLabelView(text: text, size: size, icon: iconName, width: width, height: height, isDisabled: true)
+        })
+        .disabled(true)
+    }
+}
+
+public let questions: [Question] = [
+    Question(title: "What size dog do you prefer?", choices: [
+                "Small": Dog.Size.small, "Medium": Dog.Size.medium, "Large": Dog.Size.large]),
+    Question(title: "Do you care about shedding?", choices: [
+                "I care": false, "I don't care": true]),
+    Question(title: "What personality do you prefer?", choices: [
+                "Protective": Dog.Trait.protective, "Friendly": Dog.Trait.friendly])
+]
+
+public let dogs: [Dog] = [
+    Dog("Mini Schnauzer", #imageLiteral(resourceName: "mini_schnauzer.jpg"), Dog.Size.small, doesShed: false, Dog.Trait.protective),
+    Dog("Kerry Blue Terrier", #imageLiteral(resourceName: "kerry_blue_terrier.jpg"), Dog.Size.small, doesShed: false, Dog.Trait.friendly),
+    Dog("Chihuahua", #imageLiteral(resourceName: "chihuahua.jpg"), Dog.Size.small, doesShed: true, Dog.Trait.protective),
+    Dog("Pembroke Welsh Corgi", #imageLiteral(resourceName: "pembroke_welsh_corgi.jpg"), Dog.Size.small, doesShed: true, Dog.Trait.friendly),
+    Dog("Portuguese Water Dog", #imageLiteral(resourceName: "portuguese_water_dog.jpg"), Dog.Size.medium, doesShed: false, Dog.Trait.protective),
+    Dog("Irish Water Spaniel", #imageLiteral(resourceName: "irish_water_spaniel.jpg"), Dog.Size.medium, doesShed: false, Dog.Trait.friendly),
+    Dog("Rough Collie", #imageLiteral(resourceName: "rough_collie.jpg"), Dog.Size.medium, doesShed: true, Dog.Trait.protective),
+    Dog("Rottweiler", #imageLiteral(resourceName: "rottweiler.jpg"), Dog.Size.medium, doesShed: true, Dog.Trait.friendly),
+    Dog("Giant Schnauzer", #imageLiteral(resourceName: "giant_schnauzer.jpg"), Dog.Size.large, doesShed: false, Dog.Trait.protective),
+    Dog("Bullmastiff", #imageLiteral(resourceName: "bullmastiff.JPG"), Dog.Size.large, doesShed: false, Dog.Trait.friendly),
+    Dog("Dobermann", #imageLiteral(resourceName: "dobermann.jpg"), Dog.Size.large, doesShed: true, Dog.Trait.protective),
+    Dog("Golden Retriever", #imageLiteral(resourceName: "golden_retriever.jpg"), Dog.Size.large, doesShed: true, Dog.Trait.friendly)
+]
+</string>
+			<key>ModifiedRange</key>
+			<string>{75, 4785}</string>
+			<key>OriginalContent</key>
+			<string></string>
+			<key>OriginalRange</key>
+			<string>{75, 0}</string>
+		</dict>
+	</array>
+	<key>File</key>
+	<string>UserModules/UserModule.playgroundmodule/Sources/SharedCode.swift</string>
+</dict>
+</plist>
